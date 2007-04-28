@@ -3,13 +3,12 @@
 
 Summary: 	Enhanced LaTeX mode for GNU Emacs
 Name: 		emacs-auctex
-Version: 	11.82
-Release:	%mkrel 2
+Version: 	11.84
+Release:	%mkrel 1
 License: 	GPL
 Group: 		Editors
-Source0:        http://ftp.gnu.org/pub/gnu/auctex/auctex-%{version}.tar.bz2
-URL: 		http://www.cs.auc.dk/~amanda/auctex/
-Packager:       Pixel <pixel@mandrakesoft.com>
+Source:		http://ftp.gnu.org/pub/gnu/auctex/auctex-%{version}.tar.bz2
+URL: 		http://www.gnu.org/software/auctex/
 Requires: emacs = %emacsver
 Requires: tetex-latex
 BuildRequires: emacs-X11
@@ -29,8 +28,8 @@ writing, editing and processing  input files for LaTeX using GNU Emacs.
 %setup -q -n %rname-%version
 
 %build
-%configure2_5x --with-emacs
-make
+%configure --with-emacs
+%make
 
 %install
 rm -rf $RPM_BUILD_ROOT
