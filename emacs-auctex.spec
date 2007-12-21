@@ -14,6 +14,7 @@ Requires: tetex-latex
 BuildRequires: emacs-X11
 BuildRequires: tetex-latex tetex-dvips
 BuildArchitectures: noarch
+BuildRoot: %_tmppath/%name-build
 Provides:	%rname = %version-%release
 Obsoletes:	%rname
 Provides: preview-latex-common preview-latex-emacs
