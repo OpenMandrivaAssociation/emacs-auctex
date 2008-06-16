@@ -4,7 +4,7 @@
 Summary: 	Enhanced LaTeX mode for GNU Emacs
 Name: 		emacs-auctex
 Version: 	11.84
-Release:	%mkrel 2
+Release:	%mkrel 3
 License: 	GPL
 Group: 		Editors
 Source:		http://ftp.gnu.org/pub/gnu/auctex/auctex-%{version}.tar.bz2
