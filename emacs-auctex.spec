@@ -1,24 +1,23 @@
-%define emacsver 21.4
 %define	rname	auctex
 
 Summary: 	Enhanced LaTeX mode for GNU Emacs
 Name: 		emacs-auctex
 Version: 	11.85
-Release:	%mkrel 1
+Release:	%mkrel 2
 License: 	GPLv3+
 Group: 		Editors
 Source:		http://ftp.gnu.org/pub/gnu/auctex/auctex-%{version}.tar.lzma
 URL: 		http://www.gnu.org/software/auctex/
-Requires: 	emacs = %emacsver
+Requires: 	emacs 
 Requires: 	tetex-latex
 BuildRequires: 	emacs-X11
 BuildRequires: 	tetex-latex tetex-dvips
 BuildArchitectures: noarch
-BuildRoot: %_tmppath/%name-build
-Provides:	%rname = %version-%release
-Obsoletes:	%rname
-Provides: preview-latex-common preview-latex-emacs
-Obsoletes: preview-latex-common preview-latex-emacs
+BuildRoot: 	    %_tmppath/%name-build
+Provides:	    %rname = %version-%release
+Obsoletes:	    %rname
+Provides: 	    preview-latex-common preview-latex-emacs
+Obsoletes: 	    preview-latex-common preview-latex-emacs
 
 %description
 AUC TeX is a comprehensive, customizable, integrated environment for
