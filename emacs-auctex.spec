@@ -2,11 +2,11 @@
 
 Summary: 	Enhanced LaTeX mode for GNU Emacs
 Name: 		emacs-auctex
-Version: 	11.85
-Release:	%mkrel 2
+Version: 	11.86
+Release:	%mkrel 1
 License: 	GPLv3+
 Group: 		Editors
-Source:		http://ftp.gnu.org/pub/gnu/auctex/auctex-%{version}.tar.lzma
+Source:		http://ftp.gnu.org/pub/gnu/auctex/auctex-%{version}.zip
 URL: 		http://www.gnu.org/software/auctex/
 Requires: 	emacs 
 Requires: 	tetex-latex
@@ -20,8 +20,9 @@ Provides: 	    preview-latex-common preview-latex-emacs
 Obsoletes: 	    preview-latex-common preview-latex-emacs
 
 %description
-AUC TeX is a comprehensive, customizable, integrated environment for
-writing, editing and processing  input files for LaTeX using GNU Emacs. 
+AUCTeX is a comprehensive customizable integrated environment for
+writing input files for TeX, LaTeX, ConTeXt, Texinfo, and docTeX using
+GNU Emacs.
 
 %prep
 %setup -q -n %rname-%version
@@ -31,16 +32,16 @@ writing, editing and processing  input files for LaTeX using GNU Emacs.
 %make
 
 %install
-%__rm -rf %buildroot
+%__rm -rf %{buildroot}
 
 install -d $RPM_BUILD_ROOT{%{_datadir}/emacs/site-lisp,%{_infodir}}
 %makeinstall autodir=$RPM_BUILD_ROOT/var/lib/auctex
 
-# gw already in tetex-latex
+# This is already in tetex-latex:
 %__rm -rf %buildroot%_datadir/texmf/tex/latex/preview
-# what's this for?
+# What's this for?
 %__rm -rf %buildroot/var/lib/auctex
-# don't install reference card
+# Don't install reference card:
 %__rm -rf %buildroot%_datadir/doc/auctex
 
 #perl -pi -e "s|$RPM_BUILD_ROOT||" $RPM_BUILD_ROOT/%_datadir/emacs/site-lisp/tex-site.el
@@ -54,12 +55,11 @@ echo "(if (string-match \"GNU Emacs\" (version)) (require 'tex-site))" >> $RPM_B
 %_remove_install_info %rname
 
 %clean
-%__rm -rf %buildroot
+%__rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %doc RELEASE COPYING INSTALL README TODO FAQ CHANGES
-#%doc doc/tex-ref.pdf
 %_infodir/*
 %_datadir/emacs/site-lisp/%rname
 %_datadir/emacs/site-lisp/auctex.el
