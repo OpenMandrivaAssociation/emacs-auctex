@@ -34,8 +34,8 @@ GNU Emacs.
 %install
 %__rm -rf %{buildroot}
 
-install -d $RPM_BUILD_ROOT{%{_datadir}/emacs/site-lisp,%{_infodir}}
-%makeinstall autodir=$RPM_BUILD_ROOT/var/lib/auctex
+install -d %{buildroot}{%{_datadir}/emacs/site-lisp,%{_infodir}}
+%makeinstall autodir=%{buildroot}/var/lib/auctex
 
 # This is already in tetex-latex:
 %__rm -rf %buildroot%_datadir/texmf/tex/latex/preview
@@ -44,9 +44,9 @@ install -d $RPM_BUILD_ROOT{%{_datadir}/emacs/site-lisp,%{_infodir}}
 # Don't install reference card:
 %__rm -rf %buildroot%_datadir/doc/auctex
 
-#perl -pi -e "s|$RPM_BUILD_ROOT||" $RPM_BUILD_ROOT/%_datadir/emacs/site-lisp/tex-site.el
-install -d $RPM_BUILD_ROOT%_sysconfdir/emacs/site-start.d
-echo "(if (string-match \"GNU Emacs\" (version)) (require 'tex-site))" >> $RPM_BUILD_ROOT%_sysconfdir/emacs/site-start.d/%rname.el
+#perl -pi -e "s|%{buildroot}||" %{buildroot}/%_datadir/emacs/site-lisp/tex-site.el
+install -d %{buildroot}%_sysconfdir/emacs/site-start.d
+echo "(if (string-match \"GNU Emacs\" (version)) (require 'tex-site))" >> %{buildroot}%_sysconfdir/emacs/site-start.d/%rname.el
 
 %post
 %_install_info %rname
