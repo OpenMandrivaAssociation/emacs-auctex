@@ -3,7 +3,7 @@
 Summary: 	Enhanced LaTeX mode for GNU Emacs
 Name: 		emacs-auctex
 Version: 	11.86
-Release:	5
+Release:	6
 License: 	GPLv3+
 Group: 		Editors
 Url: 		http://www.gnu.org/software/auctex/
