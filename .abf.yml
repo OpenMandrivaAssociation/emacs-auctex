@@ -1,2 +1,4 @@
+removed_sources:
+  auctex-11.86.zip: afc298c39ab3007f229883fe3603ed144761415b
 sources:
-  "auctex-11.86.zip": afc298c39ab3007f229883fe3603ed144761415b
+  auctex-11.87.tar.gz: 0be92c7d8f89d57346fe07f05a1a045ffd11cd71
