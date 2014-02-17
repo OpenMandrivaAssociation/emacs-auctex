@@ -10,7 +10,7 @@ Url: 		http://www.gnu.org/software/auctex/
 Source0:	http://ftp.gnu.org/pub/gnu/auctex/%{rname}-%{version}.zip
 BuildArch:	noarch
 
-BuildRequires: 	emacs-X11
+BuildRequires: 	emacs
 BuildRequires:	tetex-dvips
 BuildRequires: 	tetex-latex
 Requires: 	emacs 
