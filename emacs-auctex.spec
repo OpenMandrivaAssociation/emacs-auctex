@@ -27,7 +27,7 @@ GNU Emacs.
 %{_datadir}/emacs/site-lisp/auctex.el
 %{_datadir}/emacs/site-lisp/preview-latex.el
 %{_datadir}/emacs/site-lisp/tex-site.el
-%{_datadir}/texmf/doc/latex/styles/preview.dvi
+%{_datadir}/texmf-dist/tex/latex/preview
 %{_infodir}/*
 
 #----------------------------------------------------------------------------
