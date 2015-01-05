@@ -9,11 +9,12 @@ Group: 		Editors
 Url: 		http://www.gnu.org/software/auctex/
 Source0:	http://ftp.gnu.org/pub/gnu/auctex/auctex-%{version}.tar.gz
 BuildRequires:	emacs
-BuildRequires:	tetex-dvips
-BuildRequires:	tetex-latex
-BuildRequires: texlive-latex-bin
+BuildRequires:	texlive-dvips
+BuildRequires:	texlive
+BuildRequires:	texlive-latex-bin
 Requires:	emacs
-Requires:	tetex-latex
+Requires:	texlive
+Requires:	texlive-latex-bin
 BuildArch:	noarch
 
 %description
