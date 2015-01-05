@@ -25,8 +25,8 @@ GNU Emacs.
 %doc RELEASE COPYING INSTALL README TODO FAQ CHANGES
 %config(noreplace) %{_sysconfdir}/emacs/site-start.d/%{rname}*
 %{_datadir}/emacs/site-lisp/%{rname}
-%{_datadir}/emacs/site-lisp/site-start.d/auctex.el
-%{_datadir}/emacs/site-lisp/site-start.d/preview-latex.el
+%{_datadir}/emacs/site-lisp/auctex.el
+%{_datadir}/emacs/site-lisp/preview-latex.el
 %{_datadir}/emacs/site-lisp/tex-site.el
 %{_datadir}/texmf-dist/tex/latex/preview
 %{_infodir}/*
