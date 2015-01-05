@@ -11,6 +11,7 @@ Source0:	http://ftp.gnu.org/pub/gnu/auctex/auctex-%{version}.tar.gz
 BuildRequires:	emacs
 BuildRequires:	tetex-dvips
 BuildRequires:	tetex-latex
+BuildRequires: tetex-latex-bin
 Requires:	emacs
 Requires:	tetex-latex
 BuildArch:	noarch
