@@ -2,8 +2,8 @@
 
 Summary: 	Enhanced LaTeX mode for GNU Emacs
 Name: 		emacs-auctex
-Version: 	11.87
-Release:	4
+Version: 	11.88
+Release:	1
 License: 	GPLv3+
 Group: 		Editors
 Url: 		http://www.gnu.org/software/auctex/
@@ -55,5 +55,3 @@ rm -rf %{buildroot}%{_datadir}/doc/auctex
 #sed -i -e "s|%{buildroot}||" %{buildroot}/%{_datadir}/emacs/site-lisp/tex-site.el
 install -d %{buildroot}%{_sysconfdir}/emacs/site-start.d
 echo "(if (string-match \"GNU Emacs\" (version)) (require 'tex-site))" >> %{buildroot}%{_sysconfdir}/emacs/site-start.d/%{rname}.el
-
-
