@@ -6,7 +6,7 @@ Version: 	12.1
 Release:	2
 License: 	GPLv3+
 Group: 		Editors
-Url: 		http://www.gnu.org/software/auctex/
+Url: 		https://www.gnu.org/software/auctex/
 Source0:	http://ftp.gnu.org/pub/gnu/auctex/auctex-%{version}.tar.gz
 BuildRequires:	emacs
 BuildRequires:	texlive-dvips
